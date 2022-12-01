@@ -77,13 +77,22 @@
 }
 
 /** General **/
+html {
+	width: 100vw;
+}
+
 body {
 	background-color: #F5F5F5;
 	width: 100%;
 	margin: 0;
 	font-family: "HK Grotesk", sans-serif;
 	font-weight: 100;
-	color: #2F322D
+	color: #2F322D;
+	overflow-x: hidden;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 h2 {
@@ -99,6 +108,15 @@ h3 {
 	text-transform: uppercase;
 	font-size: 16px;
 	color: #2F322D
+}
+
+h6 {
+	font-family: "HK Grotesk", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: #2F322D;
+	text-transform: uppercase;
+	margin: 0;
 }
 
 
@@ -237,7 +255,7 @@ h3 {
 
 
 .paragraph-wrapper {
-	width: 580px;
+	width: 40vw;
 	font-size: 18px;
 	text-align: center;
 
@@ -259,6 +277,10 @@ h3 {
 	font-size: 13vw;
 	line-height: 0%;
 	color: #c6c3c8;
+}
+
+.about-wrapper {
+	width: 100vw;
 }
 
 .about-img-wrapper {
@@ -287,11 +309,79 @@ h3 {
 
 
 /** Feature Project Section **/
-#feature-section {
+#feature-section-title {
 	height: 100vh;
 }
 
 #feature-title {
 	font-size: 13vw;
 	line-height: 0%;
+}
+
+#feature_project-section {
+	height: 100vh;
+	align-items: flex-start;
+	margin: 0 10vw;
+}
+
+#feature-project-title {
+	font-weight: 400;
+	font-size: 32px;
+	margin-top: 25vh;
+}
+
+.separator {
+	width: 100%;
+	height: 3px;
+	background-color: #363934;
+}
+
+.feature-content-wrapper {
+	margin-top: 10vh;
+	width: 80vw;
+	height: 40vh
+}
+
+.feature-project-text-wrapper {
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-left: 5vw;
+	width: 45vw;
+	height: 40vh;
+}
+
+#roomee-desktop-mockup {
+	width: 30vw;
+	position: relative;
+}
+
+#roomee-mobile-mockup {
+	width: 8vw;
+	position: relative;
+	top: -35vh;
+	left: 25vw;
+	animation: floater 3s infinite ease;
+}
+
+.two-cols-layout {
+	display: flex;
+	flex-direction: row;
+}
+
+
+.feature-project-description-title {
+	margin-left: 3vw;
+	width: 10vw;
+	align-items: flex-start;
+}
+
+.feature-project-description-text {
+	width: 25vw;
+}
+
+.feature-project-description-text p {
+	text-transform: uppercase;
+	font-size: 12px;
+	margin: 0;
+	line-height: 150%;
 }

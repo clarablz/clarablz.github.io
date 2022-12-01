@@ -56,7 +56,7 @@ gsap.to("#arrow-down", {
 gsap.to(".about-wrapper", {
     opacity: 0,
     scrollTrigger: {
-        trigger: "#feature-section",
+        trigger: "#feature-section-title",
         end: "-=400",
         scrub: true,
     }
@@ -64,7 +64,7 @@ gsap.to(".about-wrapper", {
 
 gsap.from('#feature-title', {
     scrollTrigger: {
-        trigger: "#feature-title",
+        trigger: "#feature-section-title",
         start: "center center",
         markers: true,
         end: "+=1000",
@@ -74,7 +74,17 @@ gsap.from('#feature-title', {
     }, scale: 3
 });
 
-
+gsap.from('#roomee-mobile-mockup', {
+    scrollTrigger: {
+        trigger: "#feature_project-section",
+        start: "center center",
+        markers: true,
+        scrub: true,
+        pin: true,
+        toggleActions: "restart restart restart none"
+    },
+    opacity: 0, top: 20
+})
 
 
 
