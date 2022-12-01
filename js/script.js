@@ -31,8 +31,8 @@ gsap.from("#freelance-title", {
 //     }
 // })
 
-gsap.from(".about-img", {
-    top: 400,
+gsap.to(".about-img", {
+    top: -2400,
     scrollTrigger: {
         trigger: "#about-section",
         start: 'center 50%',

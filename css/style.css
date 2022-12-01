@@ -231,7 +231,7 @@ h3 {
 #about-section {
 	background-color: #F5F5F5;
 	height: 100vh;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 
@@ -261,10 +261,27 @@ h3 {
 	color: #c6c3c8;
 }
 
-.about-img {
+.about-img-wrapper {
 	z-index: -1;
+	background-color: red;
+	width: 100vw;
+	display: flex;
+	justify-content: space-evenly;
 	position: relative;
-	top: -153vh;
-	left: -25vw;
+	top: 100vh;
+}
+
+.about-img {
 	width: 30vw;
+}
+
+#portrait-1 {
+	position: relative;
+	margin-right: 10vw;
+}
+
+#portrait-2 {
+	position: relative;
+	top: 100vh;
+	margin-left: 10vw;
 }
