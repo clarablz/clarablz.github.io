@@ -231,7 +231,7 @@ h3 {
 #about-section {
 	background-color: #F5F5F5;
 	height: 100vh;
-	/* overflow: hidden; */
+	overflow: hidden;
 }
 
 
@@ -263,7 +263,6 @@ h3 {
 
 .about-img-wrapper {
 	z-index: -1;
-	background-color: red;
 	width: 100vw;
 	display: flex;
 	justify-content: space-evenly;
@@ -282,6 +281,17 @@ h3 {
 
 #portrait-2 {
 	position: relative;
-	top: 100vh;
+	top: 200vh;
 	margin-left: 10vw;
+}
+
+
+/** Feature Project Section **/
+#feature-section {
+	height: 100vh;
+}
+
+#feature-title {
+	font-size: 13vw;
+	line-height: 0%;
 }
