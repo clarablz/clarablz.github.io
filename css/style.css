@@ -1,0 +1,270 @@
+/*** CSS Styles  ***/
+
+/** Fonts **/
+
+/* Voyage  */
+@font-face {
+	font-family: "Voyage";
+	font-display: swap;
+	src: url("/css/fonts/Voyage-Regular.ttf");
+	font-style: normal;
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: "Voyage";
+	font-display: swap;
+	src: url("/css/fonts/Voyage-Bold.ttf");
+	font-style: normal;
+	font-weight: 400;
+}
+
+/* HK Grotesk Family */
+@font-face {
+	font-family: "HK Grotesk";
+	font-display: swap;
+	src: url("/css/fonts/HKGrotesk-Light.otf");
+	font-style: normal;
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: "HK Grotesk";
+	font-display: swap;
+	src: url("/css/fonts/HKGrotesk-Regular.otf");
+	font-style: normal;
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: "HK Grotesk";
+	font-display: swap;
+	src: url("/css/fonts/HKGrotesk-Medium.otf");
+	font-style: normal;
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: "HK Grotesk";
+	font-display: swap;
+	src: url("/css/fonts/HKGrotesk-SemiBold.otf");
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "HK Grotesk";
+	font-display: swap;
+	src: url("/css/fonts/HKGrotesk-Bold.otf");
+	font-style: normal;
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: "HK Grotesk";
+	font-display: swap;
+	src: url("/css/fonts/HKGrotesk-Black.otf");
+	font-style: normal;
+	font-weight: 600;
+}
+
+/*Mazius*/
+@font-face {
+	font-family: "Mazius";
+	font-display: swap;
+	src: url("/css/fonts/Mazius\ Display\ Italic.otf");
+	font-style: normal;
+}
+
+/** General **/
+body {
+	background-color: #F5F5F5;
+	width: 100%;
+	margin: 0;
+	font-family: "HK Grotesk", sans-serif;
+	font-weight: 100;
+	color: #2F322D
+}
+
+h2 {
+	font-family: "Voyage", sans-serif;
+	font-weight: 200;
+	font-size: 2.5em;
+	color: #2F322D
+}
+
+h3 {
+	font-family: "HK Grotesk", sans-serif;
+	font-weight: 100;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #2F322D
+}
+
+
+.layout-flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.bold {
+	font-family: 'Mazius';
+}
+
+/** Navigation **/
+.navigation-bar {
+	mix-blend-mode: difference;
+	position: fixed;
+	z-index: 2;
+	margin: auto;
+	width: 100%;
+	overflow: hidden;
+}
+
+.logo {
+	position: fixed;
+	font-family: "Voyage", sans-serif;
+	font-weight: 200;
+	font-size: 2rem;
+	margin: 0;
+
+}
+
+.logo a {
+	text-decoration: none;
+	color: #C6C3C8;
+}
+
+.logo,
+.navbar-items {
+	list-style-type: none;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.logo-bold {
+	font-weight: 400;
+}
+
+
+.navbar-items-wrapper li a {
+	font-family: 'HK Grotesk', sans-serif;
+	font-size: 1.05em;
+	color: #c6c3c8;
+	text-align: center;
+	font-size: 20px;
+	padding: 12px 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.navbar-items-wrapper {
+	float: right;
+	padding-right: 1%;
+}
+
+/** Home Section **/
+.title-wrap {
+	height: 100vh;
+}
+
+.name-title {
+	font-family: "Voyage", sans-serif;
+	font-size: 16vw;
+	line-height: 80%;
+	font-weight: 200;
+	margin: 0;
+	color: #2F322D;
+}
+
+#first-name-title {
+	position: relative;
+	left: -18vw;
+}
+
+#last-name-title {
+	position: relative;
+	left: 8vw;
+}
+
+#student-title {
+	width: 240px;
+	position: absolute;
+	top: 40vh;
+	left: 60vw;
+}
+
+#freelance-title {
+	width: 240px;
+	position: absolute;
+	top: 60vh;
+	left: 10vw;
+}
+
+.icon-wrapper {
+	position: relative;
+	top: -15vh;
+}
+
+#arrow-down {
+	animation: floater 3s infinite ease;
+	height: 70px;
+}
+
+@keyframes floater {
+	0% {
+		transform: translateY(3vh);
+	}
+
+	50% {
+		transform: translateY(0)
+	}
+
+	100% {
+		transform: translateY(3vh);
+	}
+}
+
+/** About Section **/
+#about-section {
+	background-color: #F5F5F5;
+	height: 100vh;
+	overflow: hidden;
+}
+
+
+
+.paragraph-wrapper {
+	width: 580px;
+	font-size: 18px;
+	text-align: center;
+
+}
+
+.paragraph-wrapper p {
+	margin: 0;
+	mix-blend-mode: difference;
+	color: #c6c3c8;
+}
+
+.title-wrapper {
+	mix-blend-mode: difference;
+	margin-top: 75vh;
+}
+
+#about-title {
+	position: relative;
+	font-size: 13vw;
+	line-height: 0%;
+	color: #c6c3c8;
+}
+
+.about-img {
+	z-index: -1;
+	position: relative;
+	top: -153vh;
+	left: -25vw;
+	width: 30vw;
+}
