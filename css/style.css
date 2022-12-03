@@ -79,6 +79,7 @@
 /** General **/
 html {
 	width: 100vw;
+	overflow-x: hidden;
 }
 
 body {
@@ -88,7 +89,7 @@ body {
 	font-family: "HK Grotesk", sans-serif;
 	font-weight: 100;
 	color: #2F322D;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 * {
@@ -137,7 +138,7 @@ h6 {
 	position: fixed;
 	z-index: 2;
 	margin: auto;
-	width: 100%;
+	width: 100vw;
 	overflow: hidden;
 }
 
@@ -311,6 +312,7 @@ h6 {
 /** Feature Project Section **/
 #feature-section-title {
 	height: 100vh;
+	overflow: hidden;
 }
 
 #feature-title {
@@ -320,7 +322,7 @@ h6 {
 
 #feature_project-section {
 	height: 100vh;
-	align-items: flex-start;
+	align-items: center;
 	margin: 0 10vw;
 }
 
@@ -334,6 +336,10 @@ h6 {
 	width: 100%;
 	height: 3px;
 	background-color: #363934;
+}
+
+#feature-project-section {
+	height: 100vh;
 }
 
 .feature-content-wrapper {
@@ -355,11 +361,17 @@ h6 {
 	position: relative;
 }
 
+#roomee-mobile-img-wrapper {
+	position: relative;
+	top: -55vh;
+	margin-bottom: -55vh;
+}
+
 #roomee-mobile-mockup {
 	width: 8vw;
 	position: relative;
-	top: -35vh;
-	left: 25vw;
+	top: 0vh;
+	left: 35vw;
 	animation: floater 3s infinite ease;
 }
 
@@ -384,4 +396,85 @@ h6 {
 	font-size: 12px;
 	margin: 0;
 	line-height: 150%;
+}
+
+/** Projects Section **/
+
+#project-title-wrapper {
+	height: 100vh;
+	width: 100vw;
+}
+
+#project-title {
+	font-size: 13vw;
+	line-height: 0%;
+}
+
+#project-1-section,
+#project-2-section,
+#project-3-section {
+	/* height: 100vh; */
+	justify-content: center;
+	margin-top: 0;
+}
+
+.project-content-wrapper {
+	/* margin-top: 10vh; */
+	width: 80vw;
+	height: 60vh;
+	align-items: center;
+	justify-content: center;
+}
+
+.mockup-mobile-1,
+.mockup-mobile-2,
+.mockup-mobile-3 {
+	height: 40vh
+}
+
+/* 
+#alix-mockup {
+	width: 24vw;
+} */
+
+
+.mockup-mobile-1-wrapper,
+.mockup-mobile-3-wrapper {
+	position: relative;
+	height: 40vh;
+	display: flex;
+	align-items: center;
+}
+
+.mockup-mobile-2-wrapper {
+	height: 40vh;
+	display: flex;
+	align-items: center;
+	margin-right: 5vw;
+	position: relative;
+}
+
+.project-text-wrapper {
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-left: 5vw;
+	width: 45vw;
+	height: 30vh;
+}
+
+.project-title {
+	font-family: 'Mazius';
+	font-size: 44px;
+	margin-left: 3vw;
+}
+
+.right {
+	margin-left: 0;
+
+}
+
+#project-1-text-wrapper,
+#project-2-text-wrapper,
+#project-3-text-wrapper {
+	position: relative;
 }

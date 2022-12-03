@@ -39,7 +39,6 @@ gsap.to(".about-img", {
         end: "+=2000",
         scrub: true,
         pin: true,
-        markers: true,
         toggleActions: "restart restart restart none",
     }
 })
@@ -66,7 +65,29 @@ gsap.from('#feature-title', {
     scrollTrigger: {
         trigger: "#feature-section-title",
         start: "center center",
+        end: "+=1000",
+        toggleActions: "restart restart restart none", //events : onEnter, onLeave, onEnterBack, onLeaveBacks
+        scrub: true,
         markers: true,
+        pin: true //permet de fixer le poisson au centre, il ne descend pas avec le scroll
+    }, scale: 3
+});
+
+// gsap.to('#roomee-mobile-mockup', {
+//     scrollTrigger: {
+//         trigger: "#feature-project-section",
+//         start: "center center",
+//         scrub: true,
+//         pin: true,
+//         toggleActions: "restart restart restart none"
+//     },
+
+// })
+
+gsap.from('#project-title', {
+    scrollTrigger: {
+        trigger: "#project-title-wrapper",
+        start: "center center",
         end: "+=1000",
         toggleActions: "restart restart restart none", //events : onEnter, onLeave, onEnterBack, onLeaveBacks
         scrub: true,
@@ -74,18 +95,53 @@ gsap.from('#feature-title', {
     }, scale: 3
 });
 
-gsap.from('#roomee-mobile-mockup', {
+gsap.from('.mockup-mobile-1-wrapper', {
     scrollTrigger: {
-        trigger: "#feature_project-section",
-        start: "center center",
-        markers: true,
-        scrub: true,
-        pin: true,
-        toggleActions: "restart restart restart none"
-    },
-    opacity: 0, top: 20
+        trigger: "#project-1-section",
+        start: "20% 80%",
+        toggleActions: "play complete none reverse",
+    }, opacity: 0, top: 40, duration: 1
 })
 
+gsap.from('#project-1-text-wrapper', {
+    scrollTrigger: {
+        trigger: "#project-1-section",
+        start: "20% 80%",
+        toggleActions: "play complete none reverse",
+    }, opacity: 0, left: -20, duration: 1
+})
+
+gsap.from('.mockup-mobile-2-wrapper', {
+    scrollTrigger: {
+        trigger: ".mockup-mobile-2-wrapper",
+        start: "20% 80%",
+        toggleActions: "play complete none reverse",
+    }, opacity: 0, top: 40, duration: 1
+})
+
+gsap.from('#project-2-text-wrapper', {
+    scrollTrigger: {
+        trigger: ".mockup-mobile-2-wrapper",
+        start: "20% 80%",
+        toggleActions: "play complete none reverse",
+    }, opacity: 0, left: -20, duration: 1
+})
+
+gsap.from('.mockup-mobile-3-wrapper', {
+    scrollTrigger: {
+        trigger: ".mockup-mobile-3-wrapper",
+        start: "20% 80%",
+        toggleActions: "play complete none reverse",
+    }, opacity: 0, top: 40, duration: 1
+})
+
+gsap.from('#project-3-text-wrapper', {
+    scrollTrigger: {
+        trigger: ".mockup-mobile-3-wrapper",
+        start: "20% 80%",
+        toggleActions: "play complete none reverse",
+    }, opacity: 0, left: -20, duration: 1
+})
 
 
 /* smooth scroll on mouse wheel 
