@@ -1,4 +1,73 @@
+//todo links nav
+//todo hover social svg
+//todo responsive
+
 /* Javascript */
+
+let mouseCursor = document.querySelector(".cursor");
+let navLinks = document.querySelectorAll(".navbar-items-wrapper li");
+let h1 = document.querySelectorAll('h1');
+let h2 = document.querySelectorAll('h2');
+
+window.addEventListener('mousemove', cursor);
+function cursor(e) {
+    mouseCursor.style.top = e.clientY + 'px';
+    mouseCursor.style.left = e.clientX + 'px';
+}
+
+
+
+navLinks.forEach(link => {
+    link.addEventListener('mouseleave', () => {
+        mouseCursor.classList.remove('grow');
+        link.classList.remove('hovered-link');
+    });
+    link.addEventListener('mouseover', () => {
+        console.log("hovered");
+        mouseCursor.classList.add('grow');
+        link.classList.add('hovered-link');
+    });
+
+}
+)
+
+// h2.forEach(h => {
+//     h.addEventListener('mouseleave', () => {
+//         mouseCursor.classList.remove('grow-bigger');
+//         // link.classList.remove('hovered-link');
+//     });
+//     h.addEventListener('mouseover', () => {
+//         console.log("hovered");
+//         mouseCursor.classList.add('grow-bigger');
+//         // link.classList.add('hovered-link');
+//     });
+
+// }
+// )
+
+h1.forEach(h => {
+    h.addEventListener('mouseleave', () => {
+        mouseCursor.classList.remove('grow-bigger');
+        // link.classList.remove('hovered-link');
+    });
+    h.addEventListener('mouseover', () => {
+        console.log("hovered");
+        mouseCursor.classList.add('grow-bigger');
+        // link.classList.add('hovered-link');
+    });
+
+}
+)
+
+// function moveCursor(e) {
+//     gsap.to(mouseCursor, 0.3, {
+//         css: {
+//             left: e.clientX,
+//             top: e.clientY
+//         }
+//     });
+// }
+
 
 /* GSAP Greensock */
 gsap.registerPlugin(ScrollTrigger);
@@ -68,7 +137,6 @@ gsap.from('#feature-title', {
         end: "+=1000",
         toggleActions: "restart restart restart none", //events : onEnter, onLeave, onEnterBack, onLeaveBacks
         scrub: true,
-        markers: true,
         pin: true //permet de fixer le poisson au centre, il ne descend pas avec le scroll
     }, scale: 3
 });
@@ -144,6 +212,41 @@ gsap.from('#project-3-text-wrapper', {
 })
 
 
+gsap.to('body', {
+    scrollTrigger: {
+        trigger: "#contact-section",
+        scrub: true,
+        toggleActions: "play complete none reverse",
+        start: "0% 50%",
+        end: "0% 0%",
+    }, backgroundColor: "#2F322D", duration: 1
+})
+
+contact_wrapper = document.querySelector('#contact-title-wrapper')
+button = document.querySelector(".copy-button");
+contact_toggle = document.querySelector(".contact-toggle");
+
+contact_toggle.addEventListener("click", function () {
+    button.innerHTML = "Copié !";
+    button.classList.add('copy-button-clicked');
+    navigator.clipboard.writeText("clara.balzano@gmail.com");
+    event.preventDefault();
+});
+
+
+contact_toggle.onmouseenter = function () {
+    button.classList.add('copy-button-visible');
+    button.classList.remove('copy-button-invisible');
+    button.classList.remove('copy-button-clicked');
+}
+
+contact_toggle.onmouseleave = function () {
+    button.classList.add('copy-button-invisible');
+    button.classList.remove('copy-button-visible');
+    button.classList.remove('copy-button-clicked');
+    button.innerHTML = "Copier l'e-mail";
+}
+
 /* smooth scroll on mouse wheel 
 code from https://stackoverflow.com/questions/47011055/smooth-vertical-scrolling-on-mouse-wheel-in-vanilla-javascript */
 
@@ -214,4 +317,8 @@ function SmoothScroll(target, speed, smooth) {
             }
         );
     }()
+}
+
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
 }
