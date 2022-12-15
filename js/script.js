@@ -21,7 +21,6 @@ function navBarFunction() {
     menuActive = !menuActive;
     mouseCursor.classList.toggle("cursor-light");
 }
-let i = 0;
 
 navLinks.forEach(link => {
     link.addEventListener("click", () => {
@@ -246,6 +245,7 @@ contact_toggle.addEventListener("click", function () {
 
 
 contact_toggle.onmouseenter = function () {
+    console.log("hover");
     button.classList.add('copy-button-visible');
     button.classList.remove('copy-button-invisible');
     button.classList.remove('copy-button-clicked');

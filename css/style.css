@@ -183,7 +183,7 @@ h6 {
 	z-index: 3;
 	margin: auto;
 	width: 100vw;
-	height: 100%;
+	height: 30vh;
 	overflow-x: hidden;
 }
 
@@ -891,7 +891,7 @@ h6 {
 
 	.paragraph-wrapper {
 		width: 70vw;
-		font-size: 12px;
+		font-size: 14px;
 	}
 
 	.title-wrapper {
@@ -990,6 +990,14 @@ h6 {
 
 	#link-arrow {
 		width: 40px;
+	}
+
+	.cursor {
+		display: none;
+	}
+
+	body {
+		cursor: default;
 	}
 
 }
