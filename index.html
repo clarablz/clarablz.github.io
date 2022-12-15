@@ -20,290 +20,298 @@
 </head>
 
 <body onload="init()">
+	<div class="wrapper">
+		<div class="cursor"></div>
+		<!-- Navigation -->
+		<div class="navigation-bar">
+			<ul id="navigation-list">
 
-	<div class="cursor"></div>
-	<!-- Navigation -->
-	<div class="navigation-bar">
-		<ul id="navigation-list">
+				<li class="logo"> <a href="#home-section">clara<span class="logo-bold">balzano</span></a> </li>
 
-			<li class="logo"> <a href="#">clara<span class="logo-bold">balzano</span></a> </li>
+				<div class="navbar-items-wrapper">
+					<li class="navbar-items"> <a href="#about-section"> à propos </a> </li>
+					<li class="navbar-items"> <a href="#feature-project-section"> à la une </a> </li>
+					<li class="navbar-items"> <a href="#project-1-section"> mes projets </a> </li>
+					<li class="navbar-items"> <a href="#contact-section"> contact </a> </li>
+				</div>
 
-			<div class="navbar-items-wrapper">
-				<li class="navbar-items"> <a href="#"> à propos </a> </li>
-				<li class="navbar-items"> <a href="#"> à la une </a> </li>
-				<li class="navbar-items"> <a href="#"> mes projets </a> </li>
-				<li class="navbar-items"> <a href="#"> contact </a> </li>
-			</div>
+				<li class="burger-icon">
+					<a href="#" onclick="navBarFunction()" id="burger"> &#9776;</a>
+				</li>
+			</ul>
 
-			<!-- <li class="icon">
-				<a href="#" onclick="navBarFunction()"> &#9776;</a>
-			</li> -->
-		</ul>
-
-	</div>
-
-
-	<!-- Home -->
-	<div id="home-section">
-		<div class="title-wrap layout-flex">
-			<h1 class="name-title" id="first-name-title">Clara</h1>
-			<h1 class="name-title" id="last-name-title">Balzano</h1>
 		</div>
-	</div>
-	<div id="student-title-wrapper">
-		<h3 id="student-title">Étudiante en ingénieurie <span class="bold">mutlimedia</span></h3>
-	</div>
 
-	<div id="freelance-title-wrapper">
-		<h3 id="freelance-title">UX/UI Designeuse et photographe <span class="bold">freelance</span></h3>
-	</div>
-	<div class="icon-wrapper layout-flex">
-		<img src="images/arrow_down.svg" alt="arrow" id="arrow-down">
-	</div>
 
-	<!-- About -->
-
-	<div class="layout-flex" id="about-section">
-		<div class="about-wrapper layout-flex">
-			<div class="title-wrapper">
-				<h2 id="about-title">À propos</h2>
+		<!-- Home -->
+		<div id="home-section">
+			<div class="title-wrap layout-flex">
+				<h1 class="name-title" id="first-name-title">Clara</h1>
+				<h1 class="name-title" id="last-name-title">Balzano</h1>
 			</div>
-			<div class="paragraph-wrapper">
-				<p>Bonjour ! Je suis <span class="bold">Clara Balzano</span>, actuellement étudiante en dernière
-					année à
-					l’école d’ingénieure
-					multimédia IMAC. Je m’y spécialise en web, 3D et en audiovisuel. En parallèle, je travaille en
-					<span class="bold">freelance</span> en tant que <span class="bold">photographe et
-						designeuse</span>
-					(UX/UI et design graphique).
-				</p>
+		</div>
+		<div class="functions">
+			<div id="student-title-wrapper">
+				<h3 id="student-title">Étudiante en ingénieurie <span class="bold">mutlimedia</span></h3>
 			</div>
+
+			<div id="freelance-title-wrapper">
+				<h3 id="freelance-title">UX/UI Designeuse et photographe <span class="bold">freelance</span></h3>
+			</div>
+		</div>
+		<div class="icon-wrapper layout-flex">
+			<img src="images/arrow_down.svg" alt="arrow" id="arrow-down">
+		</div>
+
+		<!-- About -->
+
+		<div class="layout-flex" id="about-section">
+			<div class="about-wrapper layout-flex">
+				<div class="title-wrapper">
+					<h2 id="about-title">À propos</h2>
+				</div>
+				<div class="paragraph-wrapper">
+					<p>Bonjour ! Je suis <span class="bold">Clara Balzano</span>, actuellement étudiante en dernière
+						année à
+						l’école d’ingénieure
+						multimédia IMAC. Je m’y spécialise en web, 3D et en audiovisuel. En parallèle, je travaille en
+						<span class="bold">freelance</span> en tant que <span class="bold">photographe et
+							designeuse</span>
+						(UX/UI et design graphique).
+					</p>
+				</div>
+			</div>
+
+
+
 			<div class="about-img-wrapper">
 				<img class="about-img" id="portrait-1" src="images/clara.jpg" alt="picture of Clara Balzano">
 				<img class="about-img" id="portrait-2" src="images/clara2.jpg" alt="picture of Clara Balzano">
 			</div>
 		</div>
 
-	</div>
 
-	<div class="layout-flex" id="feature-section-title">
-		<h2 id="feature-title">À la une</h2>
-	</div>
-	<div class="layout-flex" id="feature-project-section">
-		<div class="two-cols-layout feature-content-wrapper">
-			<div class="feature-project-img-wrapper">
-				<img class="feature-project-img" id="roomee-desktop-mockup" src="images/roomee-desktop-mockup.png"
-					alt="mockup of Roomee project">
-			</div>
-			<div class="feature-project-text-wrapper layout-flex">
-				<h6 class="project-title">Roomee</h6>
-				<div class="two-cols-layout feature-project-description">
-					<div class="feature-project-description-title">
-						<h6>Client</h6>
+
+		<div class="layout-flex" id="feature-section-title">
+			<h2 id="feature-title">À la une</h2>
+		</div>
+		<div class="layout-flex" id="feature-project-section">
+			<div class="two-cols-layout feature-content-wrapper">
+				<div class="feature-project-img-wrapper">
+					<img class="feature-project-img" id="roomee-desktop-mockup" src="images/roomee-desktop-mockup.png"
+						alt="mockup of Roomee project">
+				</div>
+				<div class="feature-project-text-wrapper layout-flex">
+					<h6 class="project-title">Roomee</h6>
+					<div class="two-cols-layout feature-project-description">
+						<div class="feature-project-description-title">
+							<h6>Client</h6>
+						</div>
+						<div class="feature-project-description-text">
+							<p>Roomee</p>
+						</div>
 					</div>
-					<div class="feature-project-description-text">
-						<p>Roomee</p>
+					<div class="two-cols-layout feature-project-description">
+						<div class="feature-project-description-title">
+							<h6>Date</h6>
+						</div>
+						<div class="feature-project-description-text">
+							<p>Sept. 2022 - aujourd'hui</p>
+						</div>
+					</div>
+					<div class="two-cols-layout feature-project-description">
+						<div class="feature-project-description-title">
+							<h6>Rôles</h6>
+						</div>
+						<div class="feature-project-description-text">
+							<p>UX/UI Designer, designer graphique</p>
+						</div>
+					</div>
+					<div class="two-cols-layout feature-project-description">
+						<div class="feature-project-description-title">
+							<h6>Demande</h6>
+						</div>
+						<div class="feature-project-description-text">
+							<p>Design d’une plateforme (application mobile + tableau de bord) dédiée à la gestion
+								hôtelière.
+								La plateforme combine discussion, actualités, formation et organigramme</p>
+						</div>
 					</div>
 				</div>
-				<div class="two-cols-layout feature-project-description">
-					<div class="feature-project-description-title">
-						<h6>Date</h6>
-					</div>
-					<div class="feature-project-description-text">
-						<p>Sept. 2022 - aujourd'hui</p>
-					</div>
-				</div>
-				<div class="two-cols-layout feature-project-description">
-					<div class="feature-project-description-title">
-						<h6>Rôles</h6>
-					</div>
-					<div class="feature-project-description-text">
-						<p>UX/UI Designer, designer graphique</p>
-					</div>
-				</div>
-				<div class="two-cols-layout feature-project-description">
-					<div class="feature-project-description-title">
-						<h6>Demande</h6>
-					</div>
-					<div class="feature-project-description-text">
-						<p>Design d’une plateforme (application mobile + tableau de bord) dédiée à la gestion hôtelière.
-							La plateforme combine discussion, actualités, formation et organigramme</p>
-					</div>
-				</div>
+
 			</div>
 
 		</div>
-
-	</div>
-	<div id="roomee-mobile-img-wrapper">
-		<img class="feature-project-img" id="roomee-mobile-mockup" src="images/roomee-phone-mockup.png"
-			alt="mockup of Roomee project">
-	</div>"
-
-
-	<div id="project-title-wrapper" class="layout-flex">
-		<h2 id="project-title">Mes travaux</h2>
-	</div>
-
-
-	<div class="layout-flex" id="project-1-section">
-		<div class="two-cols-layout project-content-wrapper">
-			<div class="mockup-mobile-1-wrapper">
-				<img class="mockup-mobile-1" id="goodsoup-mockup1" src="images/goodsoup-mockup.png"
-					alt="mockup of Good Soup project">
-			</div>
-			<div class="project-text-wrapper layout-flex" id="project-1-text-wrapper">
-				<h6 class="project-title">01/ Good Soup</h6>
-				<div class="two-cols-layout feature-project-description">
-					<div class="feature-project-description-title">
-						<h6>Type</h6>
-					</div>
-					<div class="feature-project-description-text">
-						<p>Projet scolaire</p>
-					</div>
-				</div>
-				<div class="two-cols-layout feature-project-description">
-					<div class="feature-project-description-title">
-						<h6>Date</h6>
-					</div>
-					<div class="feature-project-description-text">
-						<p>Avr. 2022</p>
-					</div>
-				</div>
-				<div class="two-cols-layout feature-project-description">
-					<div class="feature-project-description-title">
-						<h6>Rôles</h6>
-					</div>
-					<div class="feature-project-description-text">
-						<p>UX/UI Designer</p>
-					</div>
-				</div>
-				<div class="two-cols-layout feature-project-description">
-					<div class="feature-project-description-title">
-						<h6>Demande</h6>
-					</div>
-					<div class="feature-project-description-text">
-						<p>Application qui aide les étudiants à organiser leurs repas et facilite leurs courses </p>
-					</div>
-				</div>
-			</div>
-
+		<div id="roomee-mobile-img-wrapper">
+			<img class="feature-project-img" id="roomee-mobile-mockup" src="images/roomee-phone-mockup.png"
+				alt="mockup of Roomee project">
 		</div>
-	</div>
 
-	<div class="layout-flex" id="project-2-section">
-		<div class="two-cols-layout project-content-wrapper">
-			<div class="project-text-wrapper right layout-flex" id="project-2-text-wrapper">
-				<h6 class="project-title">02/ Embodied AI - Alix</h6>
-				<div class="two-cols-layout feature-project-description">
-					<div class="feature-project-description-title">
-						<h6>Type</h6>
+
+		<div id="project-title-wrapper" class="layout-flex">
+			<h2 id="project-title">Mes travaux</h2>
+		</div>
+
+
+		<div class="layout-flex" id="project-1-section">
+			<div class="two-cols-layout project-content-wrapper">
+				<div class="mockup-mobile-1-wrapper">
+					<img class="mockup-mobile-1" id="goodsoup-mockup1" src="images/goodsoup-mockup.png"
+						alt="mockup of Good Soup project">
+				</div>
+				<div class="project-text-wrapper layout-flex" id="project-1-text-wrapper">
+					<h6 class="project-title">01/ Good Soup</h6>
+					<div class="two-cols-layout feature-project-description">
+						<div class="feature-project-description-title">
+							<h6>Type</h6>
+						</div>
+						<div class="feature-project-description-text">
+							<p>Projet scolaire</p>
+						</div>
 					</div>
-					<div class="feature-project-description-text">
-						<p>Projet tutoré en partenariat avec Design In Situ</p>
+					<div class="two-cols-layout feature-project-description">
+						<div class="feature-project-description-title">
+							<h6>Date</h6>
+						</div>
+						<div class="feature-project-description-text">
+							<p>Avr. 2022</p>
+						</div>
+					</div>
+					<div class="two-cols-layout feature-project-description">
+						<div class="feature-project-description-title">
+							<h6>Rôles</h6>
+						</div>
+						<div class="feature-project-description-text">
+							<p>UX/UI Designer</p>
+						</div>
+					</div>
+					<div class="two-cols-layout feature-project-description">
+						<div class="feature-project-description-title">
+							<h6>Demande</h6>
+						</div>
+						<div class="feature-project-description-text">
+							<p>Application qui aide les étudiants à organiser leurs repas et facilite leurs courses </p>
+						</div>
 					</div>
 				</div>
-				<div class="two-cols-layout feature-project-description">
-					<div class="feature-project-description-title">
-						<h6>Date</h6>
-					</div>
-					<div class="feature-project-description-text">
-						<p>Janv. 2022</p>
-					</div>
-				</div>
-				<div class="two-cols-layout feature-project-description">
-					<div class="feature-project-description-title">
-						<h6>Rôles</h6>
-					</div>
-					<div class="feature-project-description-text">
-						<p>UX/UI Designer</p>
-					</div>
-				</div>
-				<div class="two-cols-layout feature-project-description">
-					<div class="feature-project-description-title">
-						<h6>Demande</h6>
-					</div>
-					<div class="feature-project-description-text">
-						<p>Amélioration de l'expérience des clients d'hôtels premium </p>
-					</div>
-				</div>
-			</div>
-			<div class="mockup-mobile-2-wrapper">
-				<img class="mockup-mobile-2" id="alix-mockup" src="images/alix-mockup.png" alt="mockup of Alix project">
+
 			</div>
 		</div>
-	</div>
-	<div class="layout-flex" id="project-3-section">
-		<div class="two-cols-layout project-content-wrapper">
-			<div class="mockup-mobile-3-wrapper">
-				<img class="mockup-mobile-3" id="alix-mockup" src="images/studea-mockup.png"
-					alt="mockup of Studea project">
-			</div>
-			<div class="project-text-wrapper layout-flex" id="project-3-text-wrapper">
-				<h6 class="project-title">03/ Studea</h6>
-				<div class="two-cols-layout feature-project-description">
-					<div class="feature-project-description-title">
-						<h6>Type</h6>
-					</div>
-					<div class="feature-project-description-text">
-						<p>Projet scolaire</p>
-					</div>
-				</div>
-				<div class="two-cols-layout feature-project-description">
-					<div class="feature-project-description-title">
-						<h6>Date</h6>
-					</div>
-					<div class="feature-project-description-text">
-						<p>Déc. 2022</p>
-					</div>
-				</div>
-				<div class="two-cols-layout feature-project-description">
-					<div class="feature-project-description-title">
-						<h6>Rôles</h6>
-					</div>
-					<div class="feature-project-description-text">
-						<p>UX/UI Designer</p>
-					</div>
-				</div>
-				<div class="two-cols-layout feature-project-description">
-					<div class="feature-project-description-title">
-						<h6>Demande</h6>
-					</div>
-					<div class="feature-project-description-text">
-						<p>Application qui centralise divers outils nécessaires pour l’organisation scolaire</p>
-					</div>
-				</div>
-			</div>
 
+		<div class="layout-flex" id="project-2-section">
+			<div class="two-cols-layout project-content-wrapper">
+				<div class="project-text-wrapper right layout-flex" id="project-2-text-wrapper">
+					<h6 class="project-title">02/ Embodied AI - Alix</h6>
+					<div class="two-cols-layout feature-project-description">
+						<div class="feature-project-description-title">
+							<h6>Type</h6>
+						</div>
+						<div class="feature-project-description-text">
+							<p>Projet tutoré en partenariat avec Design In Situ</p>
+						</div>
+					</div>
+					<div class="two-cols-layout feature-project-description">
+						<div class="feature-project-description-title">
+							<h6>Date</h6>
+						</div>
+						<div class="feature-project-description-text">
+							<p>Janv. 2022</p>
+						</div>
+					</div>
+					<div class="two-cols-layout feature-project-description">
+						<div class="feature-project-description-title">
+							<h6>Rôles</h6>
+						</div>
+						<div class="feature-project-description-text">
+							<p>UX/UI Designer</p>
+						</div>
+					</div>
+					<div class="two-cols-layout feature-project-description">
+						<div class="feature-project-description-title">
+							<h6>Demande</h6>
+						</div>
+						<div class="feature-project-description-text">
+							<p>Amélioration de l'expérience des clients d'hôtels premium </p>
+						</div>
+					</div>
+				</div>
+				<div class="mockup-mobile-2-wrapper">
+					<img class="mockup-mobile-2" id="alix-mockup" src="images/alix-mockup.png"
+						alt="mockup of Alix project">
+				</div>
+			</div>
 		</div>
-	</div>
+		<div class="layout-flex" id="project-3-section">
+			<div class="two-cols-layout project-content-wrapper">
+				<div class="mockup-mobile-3-wrapper">
+					<img class="mockup-mobile-3" id="alix-mockup" src="images/studea-mockup.png"
+						alt="mockup of Studea project">
+				</div>
+				<div class="project-text-wrapper layout-flex" id="project-3-text-wrapper">
+					<h6 class="project-title">03/ Studea</h6>
+					<div class="two-cols-layout feature-project-description">
+						<div class="feature-project-description-title">
+							<h6>Type</h6>
+						</div>
+						<div class="feature-project-description-text">
+							<p>Projet scolaire</p>
+						</div>
+					</div>
+					<div class="two-cols-layout feature-project-description">
+						<div class="feature-project-description-title">
+							<h6>Date</h6>
+						</div>
+						<div class="feature-project-description-text">
+							<p>Déc. 2022</p>
+						</div>
+					</div>
+					<div class="two-cols-layout feature-project-description">
+						<div class="feature-project-description-title">
+							<h6>Rôles</h6>
+						</div>
+						<div class="feature-project-description-text">
+							<p>UX/UI Designer</p>
+						</div>
+					</div>
+					<div class="two-cols-layout feature-project-description">
+						<div class="feature-project-description-title">
+							<h6>Demande</h6>
+						</div>
+						<div class="feature-project-description-text">
+							<p>Application qui centralise divers outils nécessaires pour l’organisation scolaire</p>
+						</div>
+					</div>
+				</div>
 
-	<div class="layout-flex" id="contact-section">
-		<p>un projet ? une idée ?</p>
+			</div>
+		</div>
 
-		<div class="contact-toggle">
-			<div id="contact-title-wrapper">
-				<a href="#" id="contact-title">Parlons-en
-					<img id="link-arrow" src="images/link-arrow.png" alt="link arrow">
+		<div class="layout-flex" id="contact-section">
+			<p>un projet ? une idée ?</p>
+
+			<div class="contact-toggle">
+				<div id="contact-title-wrapper">
+					<a href="#" id="contact-title">Parlons-en
+						<img id="link-arrow" src="images/link-arrow.png" alt="link arrow">
+					</a>
+				</div>
+				<div class="copy-button copy-button-invisible">copier l'e-mail</div>
+			</div>
+			<div class="socials-wrapper layout-flex">
+				<a href="https://www.linkedin.com/in/clara-balzano-605175212/" target="_blank">
+					<img class="socials-icon" src="images/linkedin-logo.svg" alt="linkedin icon">
+				</a>
+				<a href="https://www.behance.net/clarablz" target="_blank">
+					<img class="socials-icon" src="images/behance-logo.svg" alt="behance icon">
+				</a>
+				<a href="https://instagram.com/clara.fr" target="_blank">
+					<img class="socials-icon" src="images/insta-logo.svg" alt="instagram icon">
 				</a>
 			</div>
-			<div class="copy-button copy-button-invisible">copier l'e-mail</div>
+			<p id="copyright">© 2022 Clara balzano</p>
 		</div>
-		<div class="socials-wrapper layout-flex">
-			<a href="https://www.linkedin.com/in/clara-balzano-605175212/" target="_blank">
-				<img class="socials-icon" src="images/linkedin-logo.svg" alt="linkedin icon">
-			</a>
-			<a href="https://www.behance.net/clarablz" target="_blank">
-				<img class="socials-icon" src="images/behance-logo.svg" alt="behance icon">
-			</a>
-			<a href="https://instagram.com/clara.fr" target="_blank">
-				<img class="socials-icon" src="images/insta-logo.svg" alt="instagram icon">
-			</a>
-		</div>
-		<p id="copyright">© 2022 Clara balzano</p>
+
 	</div>
-
-
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>

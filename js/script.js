@@ -8,6 +8,7 @@ let mouseCursor = document.querySelector(".cursor");
 let navLinks = document.querySelectorAll(".navbar-items-wrapper li");
 let h1 = document.querySelectorAll('h1');
 let h2 = document.querySelectorAll('h2');
+let menuActive = false;
 
 window.addEventListener('mousemove', cursor);
 function cursor(e) {
@@ -15,58 +16,50 @@ function cursor(e) {
     mouseCursor.style.left = e.clientX + 'px';
 }
 
+function navBarFunction() {
+    document.querySelector(".navigation-bar").classList.toggle("responsive");
+    menuActive = !menuActive;
+    mouseCursor.classList.toggle("cursor-light");
+}
+let i = 0;
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        document.querySelector(".navigation-bar").classList.toggle("responsive");
+        mouseCursor.classList.toggle("cursor-light");
+        menuActive = !menuActive;
+    })
+})
 
 
 navLinks.forEach(link => {
     link.addEventListener('mouseleave', () => {
-        mouseCursor.classList.remove('grow');
-        link.classList.remove('hovered-link');
+        if (!menuActive) {
+            mouseCursor.classList.remove('grow');
+            link.classList.remove('hovered-link');
+        }
     });
-    link.addEventListener('mouseover', () => {
-        console.log("hovered");
-        mouseCursor.classList.add('grow');
-        link.classList.add('hovered-link');
+    link.addEventListener('mouseenter', () => {
+        if (!menuActive) {
+            mouseCursor.classList.add('grow');
+            link.classList.add('hovered-link');
+        }
     });
 
 }
 )
 
-// h2.forEach(h => {
-//     h.addEventListener('mouseleave', () => {
-//         mouseCursor.classList.remove('grow-bigger');
-//         // link.classList.remove('hovered-link');
-//     });
-//     h.addEventListener('mouseover', () => {
-//         console.log("hovered");
-//         mouseCursor.classList.add('grow-bigger');
-//         // link.classList.add('hovered-link');
-//     });
-
-// }
-// )
 
 h1.forEach(h => {
     h.addEventListener('mouseleave', () => {
         mouseCursor.classList.remove('grow-bigger');
-        // link.classList.remove('hovered-link');
     });
-    h.addEventListener('mouseover', () => {
-        console.log("hovered");
+    h.addEventListener('mouseenter', () => {
         mouseCursor.classList.add('grow-bigger');
-        // link.classList.add('hovered-link');
     });
 
 }
 )
-
-// function moveCursor(e) {
-//     gsap.to(mouseCursor, 0.3, {
-//         css: {
-//             left: e.clientX,
-//             top: e.clientY
-//         }
-//     });
-// }
 
 
 /* GSAP Greensock */
@@ -152,6 +145,15 @@ gsap.from('#feature-title', {
 
 // })
 
+
+gsap.from('.logo', {
+    scrollTrigger: {
+        trigger: "#about-section",
+        start: "center 85%",
+        toggleActions: "play complete none reverse"
+    }, opacity: 0, duration: 1
+})
+
 gsap.from('#project-title', {
     scrollTrigger: {
         trigger: "#project-title-wrapper",
@@ -222,6 +224,15 @@ gsap.to('body', {
     }, backgroundColor: "#2F322D", duration: 1
 })
 
+gsap.to('.cursor', {
+    scrollTrigger: {
+        trigger: "#contact-section",
+        toggleActions: "play complete none reverse",
+        start: "0% 50%",
+    },
+    border: "1px solid #f5f5f5"
+})
+
 contact_wrapper = document.querySelector('#contact-title-wrapper')
 button = document.querySelector(".copy-button");
 contact_toggle = document.querySelector(".contact-toggle");
@@ -247,7 +258,7 @@ contact_toggle.onmouseleave = function () {
     button.innerHTML = "Copier l'e-mail";
 }
 
-/* smooth scroll on mouse wheel 
+/* smooth scroll on mouse wheel
 code from https://stackoverflow.com/questions/47011055/smooth-vertical-scrolling-on-mouse-wheel-in-vanilla-javascript */
 
 function init() {

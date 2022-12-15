@@ -76,6 +76,7 @@
 	font-style: normal;
 }
 
+
 /** General **/
 html {
 	width: 100vw;
@@ -91,6 +92,12 @@ body {
 	color: #2F322D;
 	overflow: hidden;
 	cursor: none;
+}
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	width: 100vw;
 }
 
 a {
@@ -111,6 +118,12 @@ a {
 	transition: all 0.3s ease;
 	transition-property: background, transform;
 	transform-origin: 100% 100%;
+}
+
+.cursor-light {
+	border: 1px solid #f5f5f5 !important;
+	z-index: 3;
+	mix-blend-mode: normal;
 }
 
 .grow {
@@ -170,7 +183,8 @@ h6 {
 	z-index: 3;
 	margin: auto;
 	width: 100vw;
-	overflow: hidden;
+	height: 100%;
+	overflow-x: hidden;
 }
 
 .logo {
@@ -213,6 +227,10 @@ h6 {
 .navbar-items-wrapper {
 	float: right;
 	padding-right: 1%;
+}
+
+.burger-icon {
+	display: none;
 }
 
 /** Home Section **/
@@ -296,6 +314,9 @@ h6 {
 	height: 100vh;
 	overflow: hidden;
 	z-index: -1;
+	justify-content: center;
+	position: relative;
+	align-items: center;
 }
 
 
@@ -315,7 +336,7 @@ h6 {
 
 .title-wrapper {
 	mix-blend-mode: difference;
-	margin-top: 75vh;
+	margin-top: 50vh;
 }
 
 #about-title {
@@ -340,6 +361,8 @@ h6 {
 
 .about-img {
 	width: 30vw;
+	z-index: -1;
+	position: relative;
 }
 
 #portrait-1 {
@@ -384,6 +407,8 @@ h6 {
 
 #feature-project-section {
 	height: 100vh;
+	position: relative;
+	z-index: -1;
 }
 
 .feature-content-wrapper {
@@ -407,6 +432,7 @@ h6 {
 
 #roomee-mobile-img-wrapper {
 	position: relative;
+	z-index: -1;
 	top: -55vh;
 	margin-bottom: -55vh;
 }
@@ -473,7 +499,8 @@ h6 {
 .mockup-mobile-1,
 .mockup-mobile-2,
 .mockup-mobile-3 {
-	height: 40vh
+	height: 40vh;
+	z-index: -1;
 }
 
 /* 
@@ -495,6 +522,7 @@ h6 {
 	display: flex;
 	align-items: center;
 	margin-right: 5vw;
+	margin-left: 5vw;
 	position: relative;
 }
 
@@ -655,9 +683,313 @@ h6 {
 
 .socials-icon {
 	margin: auto 1vw;
+
 }
 
 #copyright {
 	position: absolute;
 	bottom: 0;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+	body {
+		overflow: hidden;
+	}
+
+	.navigation-bar li.navbar-items {
+		display: none;
+	}
+
+	.navigation-bar li.burger-icon {
+		display: inline-block;
+		position: absolute;
+		right: 5vw;
+		top: 16px;
+		color: #2F322D;
+		mix-blend-mode: normal;
+	}
+
+	.navigation-bar.responsive {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		z-index: 1;
+		mix-blend-mode: normal;
+		background-color: #2F322D;
+		transition: background-color 0.6s;
+	}
+
+	#burger {
+		color: #f5f5f5;
+		text-decoration: none;
+		font-size: 28px;
+	}
+
+	.navigation-bar.responsive li.logo {
+		display: block;
+	}
+
+	.navigation-bar.responsive .navbar-items-wrapper {
+		float: none;
+		padding-right: 0;
+	}
+
+	.navigation-bar.responsive li.navbar-items {
+		display: block;
+		padding: 50px;
+		font-size: 25px;
+	}
+
+	.navigation-bar.responsive li.navbar-items a {
+		display: block;
+		text-align: center;
+	}
+
+	.navigation-bar.responsive li.navbar-items a:hover {
+		color: #17171e;
+		border-bottom-color: transparent;
+	}
+
+	#freelance-title-wrapper {
+		transform: translateX(-30px);
+
+	}
+
+	#freelance-title,
+	#student-title {
+		font-size: 14px;
+	}
+
+
+	.paragraph-wrapper {
+		font-size: 14px;
+	}
+
+	.feature-content-wrapper {
+		/* flex-direction: column; */
+		align-items: center;
+		justify-content: center;
+		width: 90vw;
+	}
+
+	.feature-project-img-wrapper {
+		padding-bottom: 240px;
+	}
+
+	#roomee-desktop-mockup {
+		width: 40vw;
+	}
+
+	.feature-project-text-wrapper {
+		transform: translateY(-140px);
+		align-items: flex-start;
+		width: 70vw;
+		margin-left: 5vw;
+	}
+
+	.feature-project-description-text {
+		width: 45vw;
+	}
+
+	.feature-project-description-title {
+		margin: 0;
+		padding-bottom: 8px;
+	}
+
+	.project-title {
+		margin-left: 0;
+	}
+
+	.feature-project-description {
+		margin-top: 12px;
+		margin-bottom: 12px;
+		flex-direction: column;
+		/* align-items: center; */
+		justify-content: center;
+	}
+
+	#roomee-mobile-img-wrapper {
+		position: relative;
+		top: -440px;
+		left: 20px;
+	}
+
+	#project-2-section {
+		justify-content: center;
+	}
+
+	.project-content-wrapper {
+		align-items: flex-start;
+	}
+
+	#project-3-section {
+		margin-top: 100px;
+	}
+
+	#link-arrow {
+		width: 52px;
+	}
+
+}
+
+
+@media screen and (max-width: 768px) {
+	#student-title-wrapper {
+		/* position: absolute;
+		top: 70vh;
+		left: 60vw; */
+		width: 80vw;
+		position: relative;
+		top: 0;
+		left: 0;
+		margin-top: 3vh;
+
+	}
+
+	#student-title,
+	#freelance-title {
+		font-size: 12px;
+		text-align: center;
+	}
+
+	#freelance-title-wrapper {
+		position: relative;
+		top: 0;
+		left: 0;
+		/* top: 70vh; */
+		width: 80vw;
+		transform: translateX(0);
+		margin-top: 3vh;
+
+	}
+
+	.functions {
+		width: 100vw;
+		position: absolute;
+		top: 60vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.name-title {
+		transform: translateY(-18vh);
+		font-size: 20vw;
+	}
+
+	#first-name-title {
+		left: 0;
+	}
+
+	#last-name-title {
+		left: 0;
+	}
+
+	.paragraph-wrapper {
+		width: 70vw;
+		font-size: 12px;
+	}
+
+	.title-wrapper {
+		/* margin: 0; */
+	}
+
+	.about-img {
+		width: 50vw;
+	}
+
+	#portrait-1 {
+		transform: translateX(20vw);
+	}
+
+	#portrait-2 {
+		transform: translateX(-20vw);
+	}
+
+	.feature-content-wrapper {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.feature-project-img-wrapper {
+		width: 68vw;
+	}
+
+	#roomee-desktop-mockup {
+		width: 68vw;
+	}
+
+	#roomee-mobile-img-wrapper {
+		position: relative;
+		top: -92vh;
+		left: 36vw;
+
+	}
+
+	#roomee-mobile-mockup {
+		width: 18vw;
+	}
+
+	.feature-project-text-wrapper {
+		justify-content: center;
+		align-items: center;
+		margin-left: 0;
+
+	}
+
+	.feature-project-description {
+		width: 80vw;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	.feature-project-description-title h6 {
+		text-align: center;
+		margin-bottom: 0;
+		font-size: 12px;
+	}
+
+	.feature-project-description-text {
+		width: 80vw;
+	}
+
+	.feature-project-description-text p {
+		font-size: 10px;
+	}
+
+	#project-1-section,
+	#project-2-section,
+	#project-3-section {
+		height: 100vh;
+	}
+
+	#project-2-section div.project-content-wrapper {
+		flex-direction: column-reverse;
+	}
+
+	.project-content-wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#project-1-text-wrapper,
+	#project-2-text-wrapper,
+	#project-3-text-wrapper {
+		margin-left: 0;
+		align-items: center;
+		text-align: center;
+		width: 80vw;
+		margin-top: 20px;
+	}
+
+	#link-arrow {
+		width: 40px;
+	}
+
 }
