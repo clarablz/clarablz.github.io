@@ -136,10 +136,6 @@ a {
 	background-color: #2F322D;
 }
 
-* {
-	box-sizing: border-box;
-}
-
 h2 {
 	font-family: "Voyage", sans-serif;
 	font-weight: 200;
@@ -163,7 +159,6 @@ h6 {
 	text-transform: uppercase;
 	margin: 0;
 }
-
 
 .layout-flex {
 	display: flex;
@@ -211,7 +206,6 @@ h6 {
 .logo-bold {
 	font-weight: 400;
 }
-
 
 .navbar-items-wrapper li a {
 	font-family: 'HK Grotesk', sans-serif;
@@ -319,8 +313,6 @@ h6 {
 	align-items: center;
 }
 
-
-
 .paragraph-wrapper {
 	width: 40vw;
 	font-size: 18px;
@@ -356,7 +348,7 @@ h6 {
 	display: flex;
 	justify-content: space-evenly;
 	position: relative;
-	top: 100vh;
+	top: 50vh;
 }
 
 .about-img {
@@ -404,7 +396,6 @@ h6 {
 	margin-top: 25vh;
 }
 
-
 #feature-project-section {
 	height: 100vh;
 	position: relative;
@@ -449,7 +440,6 @@ h6 {
 	display: flex;
 	flex-direction: row;
 }
-
 
 .feature-project-description-title {
 	margin-left: 3vw;
@@ -503,12 +493,6 @@ h6 {
 	z-index: -1;
 }
 
-/* 
-#alix-mockup {
-	width: 24vw;
-} */
-
-
 .mockup-mobile-1-wrapper,
 .mockup-mobile-3-wrapper {
 	position: relative;
@@ -545,8 +529,26 @@ h6 {
 
 }
 
+.behance-button {
+	z-index: 2;
+	margin-left: 3vw;
+	color: #2F322D;
+	background-color: #f5f5f5;
+	border: 1px solid #2F322D;
+	text-transform: uppercase;
+	border-radius: 60px;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 12px;
+	transform: translateY(20px);
+}
 
-
+.behance-button:hover {
+	background-color: #2F322D;
+	color: #f5f5f5;
+	cursor: none;
+}
 
 #project-1-text-wrapper,
 #project-2-text-wrapper,
@@ -579,7 +581,6 @@ h6 {
 	text-align: center;
 	text-decoration: none;
 	position: relative;
-	/* margin-bottom: 30vh; */
 }
 
 #contact-title:hover,
@@ -593,7 +594,6 @@ h6 {
 	position: absolute;
 }
 
-
 #contact-title-wrapper #contact-title::after {
 	top: 100%;
 	height: 2px;
@@ -603,12 +603,10 @@ h6 {
 	transition: 0.5s ease all .1s;
 }
 
-
 #contact-title-wrapper:hover #contact-title::after {
 	width: 95%;
 	transition: 0.3s ease all;
 }
-
 
 #contact-section p {
 	text-transform: uppercase;
@@ -691,8 +689,7 @@ h6 {
 	bottom: 0;
 }
 
-
-
+/*Media Queries*/
 @media screen and (max-width: 1024px) {
 
 	body {
@@ -763,7 +760,6 @@ h6 {
 		font-size: 14px;
 	}
 
-
 	.paragraph-wrapper {
 		font-size: 14px;
 	}
@@ -807,7 +803,6 @@ h6 {
 		margin-top: 12px;
 		margin-bottom: 12px;
 		flex-direction: column;
-		/* align-items: center; */
 		justify-content: center;
 	}
 
@@ -838,15 +833,11 @@ h6 {
 
 @media screen and (max-width: 768px) {
 	#student-title-wrapper {
-		/* position: absolute;
-		top: 70vh;
-		left: 60vw; */
 		width: 80vw;
 		position: relative;
 		top: 0;
 		left: 0;
 		margin-top: 3vh;
-
 	}
 
 	#student-title,
@@ -859,7 +850,6 @@ h6 {
 		position: relative;
 		top: 0;
 		left: 0;
-		/* top: 70vh; */
 		width: 80vw;
 		transform: translateX(0);
 		margin-top: 3vh;
@@ -894,10 +884,6 @@ h6 {
 		font-size: 14px;
 	}
 
-	.title-wrapper {
-		/* margin: 0; */
-	}
-
 	.about-img {
 		width: 50vw;
 	}
@@ -928,7 +914,6 @@ h6 {
 		position: relative;
 		top: -92vh;
 		left: 36vw;
-
 	}
 
 	#roomee-mobile-mockup {
@@ -939,7 +924,6 @@ h6 {
 		justify-content: center;
 		align-items: center;
 		margin-left: 0;
-
 	}
 
 	.feature-project-description {
@@ -985,7 +969,7 @@ h6 {
 		align-items: center;
 		text-align: center;
 		width: 80vw;
-		margin-top: 20px;
+		margin-top: 32px;
 	}
 
 	#link-arrow {

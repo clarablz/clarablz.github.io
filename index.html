@@ -5,43 +5,38 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Clara Balzano">
-	<meta name="keywords" content="">
-	<meta name="copyright" content="">
-	<meta property="og:title" content="" />
-	<meta property="og:type" content="" />
-	<meta property="og:image" content="" />
-	<meta property="og:url" content="" />
-	<meta property="og:description" content="" />
+	<meta name="keywords" content="Portfolio, UX Designer, Designer">
+	<meta name="copyright" content="Clara Balzano">
+	<meta property="og:title" content="Clara Balzano - Portfolio" />
+	<meta property="og:type" content="Personnal Website" />
+	<meta property="og:image" content="https://zupimages.net/viewer.php?id=22/50/9anu.png" />
+	<meta property="og:url" content="https://clarablz.github.io" />
+	<meta property="og:description"
+		content="Portfolio de Clara Balzano, étudiante en ingénieurie multimédia et UX/UI designeuse freelance" />
 	<meta name="language" content="fr">
 	<title>Clara Balzano - Portfolio</title>
 	<link rel="icon" type="image/png" href="favicon.png">
 	<link rel="stylesheet" href="css/style.css">
-
 </head>
 
-<body onload="init()">
+<body>
 	<div class="wrapper">
 		<div class="cursor"></div>
 		<!-- Navigation -->
 		<div class="navigation-bar">
 			<ul id="navigation-list">
-
 				<li class="logo"> <a href="#home-section">clara<span class="logo-bold">balzano</span></a> </li>
-
 				<div class="navbar-items-wrapper">
 					<li class="navbar-items"> <a href="#about-section"> à propos </a> </li>
-					<li class="navbar-items"> <a href="#feature-project-section"> à la une </a> </li>
-					<li class="navbar-items"> <a href="#project-1-section"> mes projets </a> </li>
+					<li class="navbar-items"> <a href="#feature-section-title"> à la une </a> </li>
+					<li class="navbar-items"> <a href="#project-title-wrapper"> mes travaux </a> </li>
 					<li class="navbar-items"> <a href="#contact-section"> contact </a> </li>
 				</div>
-
 				<li class="burger-icon">
 					<a href="#" onclick="navBarFunction()" id="burger"> &#9776;</a>
 				</li>
 			</ul>
-
 		</div>
-
 
 		<!-- Home -->
 		<div id="home-section">
@@ -52,9 +47,8 @@
 		</div>
 		<div class="functions">
 			<div id="student-title-wrapper">
-				<h3 id="student-title">Étudiante en ingénieurie <span class="bold">mutlimedia</span></h3>
+				<h3 id="student-title">Étudiante en ingénieurie <span class="bold">multimedia</span></h3>
 			</div>
-
 			<div id="freelance-title-wrapper">
 				<h3 id="freelance-title">UX/UI Designeuse et photographe <span class="bold">freelance</span></h3>
 			</div>
@@ -64,7 +58,6 @@
 		</div>
 
 		<!-- About -->
-
 		<div class="layout-flex" id="about-section">
 			<div class="about-wrapper layout-flex">
 				<div class="title-wrapper">
@@ -81,17 +74,13 @@
 					</p>
 				</div>
 			</div>
-
-
-
 			<div class="about-img-wrapper">
 				<img class="about-img" id="portrait-1" src="images/clara.jpg" alt="picture of Clara Balzano">
 				<img class="about-img" id="portrait-2" src="images/clara2.jpg" alt="picture of Clara Balzano">
 			</div>
 		</div>
 
-
-
+		<!-- Feature project -->
 		<div class="layout-flex" id="feature-section-title">
 			<h2 id="feature-title">À la une</h2>
 		</div>
@@ -140,19 +129,16 @@
 				</div>
 
 			</div>
-
 		</div>
 		<div id="roomee-mobile-img-wrapper">
 			<img class="feature-project-img" id="roomee-mobile-mockup" src="images/roomee-phone-mockup.png"
 				alt="mockup of Roomee project">
 		</div>
 
-
+		<!-- Work -->
 		<div id="project-title-wrapper" class="layout-flex">
 			<h2 id="project-title">Mes travaux</h2>
 		</div>
-
-
 		<div class="layout-flex" id="project-1-section">
 			<div class="two-cols-layout project-content-wrapper">
 				<div class="mockup-mobile-1-wrapper">
@@ -193,15 +179,17 @@
 							<p>Application qui aide les étudiants à organiser leurs repas et facilite leurs courses </p>
 						</div>
 					</div>
+					<a href="https://www.behance.net/gallery/141859305/Good-Soup-Food-app-pour-les-tudiants"
+						target="_blank">
+						<button class="behance-button" type="button">Voir le case study</button>
+					</a>
 				</div>
-
 			</div>
 		</div>
-
 		<div class="layout-flex" id="project-2-section">
 			<div class="two-cols-layout project-content-wrapper">
 				<div class="project-text-wrapper right layout-flex" id="project-2-text-wrapper">
-					<h6 class="project-title">02/ Embodied AI - Alix</h6>
+					<h6 class="project-title">02/ Embodied AI</h6>
 					<div class="two-cols-layout feature-project-description">
 						<div class="feature-project-description-title">
 							<h6>Type</h6>
@@ -234,11 +222,16 @@
 							<p>Amélioration de l'expérience des clients d'hôtels premium </p>
 						</div>
 					</div>
+					<a href="https://www.behance.net/gallery/135985113/Alix-UIUX-Study-Case-Customizing-hotel-experience"
+						target="_blank">
+						<button class="behance-button" type="button">Voir le case study</button>
+					</a>
 				</div>
 				<div class="mockup-mobile-2-wrapper">
 					<img class="mockup-mobile-2" id="alix-mockup" src="images/alix-mockup.png"
 						alt="mockup of Alix project">
 				</div>
+
 			</div>
 		</div>
 		<div class="layout-flex" id="project-3-section">
@@ -286,6 +279,7 @@
 			</div>
 		</div>
 
+		<!-- Contact -->
 		<div class="layout-flex" id="contact-section">
 			<p>un projet ? une idée ?</p>
 

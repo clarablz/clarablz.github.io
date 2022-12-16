@@ -1,25 +1,29 @@
-//todo links nav
-//todo hover social svg
-//todo responsive
-
 /* Javascript */
 
+/* Variables*/
 let mouseCursor = document.querySelector(".cursor");
 let navLinks = document.querySelectorAll(".navbar-items-wrapper li");
+let logo = document.querySelector(".logo");
 let h1 = document.querySelectorAll('h1');
 let h2 = document.querySelectorAll('h2');
 let menuActive = false;
+contact_wrapper = document.querySelector('#contact-title-wrapper')
+button = document.querySelector(".copy-button");
+contact_toggle = document.querySelector(".contact-toggle");
 
-window.addEventListener('mousemove', cursor);
-function cursor(e) {
-    mouseCursor.style.top = e.clientY + 'px';
-    mouseCursor.style.left = e.clientX + 'px';
-}
 
+/* Responsive Navbar*/
 function navBarFunction() {
     document.querySelector(".navigation-bar").classList.toggle("responsive");
     menuActive = !menuActive;
     mouseCursor.classList.toggle("cursor-light");
+}
+
+/* Cursor and hover*/
+window.addEventListener('mousemove', cursor);
+function cursor(e) {
+    mouseCursor.style.top = e.clientY + 'px';
+    mouseCursor.style.left = e.clientX + 'px';
 }
 
 navLinks.forEach(link => {
@@ -28,8 +32,7 @@ navLinks.forEach(link => {
         mouseCursor.classList.toggle("cursor-light");
         menuActive = !menuActive;
     })
-})
-
+});
 
 navLinks.forEach(link => {
     link.addEventListener('mouseleave', () => {
@@ -46,8 +49,14 @@ navLinks.forEach(link => {
     });
 
 }
-)
+);
 
+logo.addEventListener('mouseleave', () => {
+    mouseCursor.classList.remove('grow');
+});
+logo.addEventListener('mouseenter', () => {
+    mouseCursor.classList.add('grow');
+});
 
 h1.forEach(h => {
     h.addEventListener('mouseleave', () => {
@@ -58,7 +67,29 @@ h1.forEach(h => {
     });
 
 }
-)
+);
+
+/*Contact events*/
+
+contact_toggle.onmouseenter = function () {
+    button.classList.add('copy-button-visible');
+    button.classList.remove('copy-button-invisible');
+    button.classList.remove('copy-button-clicked');
+}
+
+contact_toggle.onmouseleave = function () {
+    button.classList.add('copy-button-invisible');
+    button.classList.remove('copy-button-visible');
+    button.classList.remove('copy-button-clicked');
+    button.innerHTML = "Copier l'e-mail";
+}
+
+contact_toggle.addEventListener("click", function () {
+    button.innerHTML = "Copié !";
+    button.classList.add('copy-button-clicked');
+    navigator.clipboard.writeText("clara.balzano@gmail.com");
+    event.preventDefault();
+});
 
 
 /* GSAP Greensock */
@@ -74,26 +105,16 @@ gsap.from("#student-title", {
     opacity: 0,
     left: 800,
     duration: 1.5,
-})
+});
 
 gsap.from("#freelance-title", {
     opacity: 0,
     left: 400,
     duration: 1.5,
-})
-
-// gsap.from("#about-title", {
-//     opacity: 0,
-//     top: 100,
-//     duration: 0.4,
-//     scrollTrigger: {
-//         trigger: '#about-title',
-//         start: 'center 80%',
-//     }
-// })
+});
 
 gsap.to(".about-img", {
-    top: -2100,
+    top: "-200vh",
     scrollTrigger: {
         trigger: "#about-section",
         start: 'center 50%',
@@ -102,7 +123,7 @@ gsap.to(".about-img", {
         pin: true,
         toggleActions: "restart restart restart none",
     }
-})
+});
 
 gsap.to("#arrow-down", {
     opacity: 0,
@@ -111,7 +132,7 @@ gsap.to("#arrow-down", {
         end: "-=300",
         scrub: true,
     }
-})
+});
 
 gsap.to(".about-wrapper", {
     opacity: 0,
@@ -120,29 +141,18 @@ gsap.to(".about-wrapper", {
         end: "-=400",
         scrub: true,
     }
-})
+});
 
 gsap.from('#feature-title', {
     scrollTrigger: {
         trigger: "#feature-section-title",
         start: "center center",
         end: "+=1000",
-        toggleActions: "restart restart restart none", //events : onEnter, onLeave, onEnterBack, onLeaveBacks
+        toggleActions: "restart restart restart none",
         scrub: true,
-        pin: true //permet de fixer le poisson au centre, il ne descend pas avec le scroll
+        pin: true
     }, scale: 3
 });
-
-// gsap.to('#roomee-mobile-mockup', {
-//     scrollTrigger: {
-//         trigger: "#feature-project-section",
-//         start: "center center",
-//         scrub: true,
-//         pin: true,
-//         toggleActions: "restart restart restart none"
-//     },
-
-// })
 
 
 gsap.from('.logo', {
@@ -151,16 +161,16 @@ gsap.from('.logo', {
         start: "center 85%",
         toggleActions: "play complete none reverse"
     }, opacity: 0, duration: 1
-})
+});
 
 gsap.from('#project-title', {
     scrollTrigger: {
         trigger: "#project-title-wrapper",
         start: "center center",
         end: "+=1000",
-        toggleActions: "restart restart restart none", //events : onEnter, onLeave, onEnterBack, onLeaveBacks
+        toggleActions: "restart restart restart none",
         scrub: true,
-        pin: true //permet de fixer le poisson au centre, il ne descend pas avec le scroll
+        pin: true
     }, scale: 3
 });
 
@@ -170,7 +180,7 @@ gsap.from('.mockup-mobile-1-wrapper', {
         start: "20% 80%",
         toggleActions: "play complete none reverse",
     }, opacity: 0, top: 40, duration: 1
-})
+});
 
 gsap.from('#project-1-text-wrapper', {
     scrollTrigger: {
@@ -212,7 +222,6 @@ gsap.from('#project-3-text-wrapper', {
     }, opacity: 0, left: -20, duration: 1
 })
 
-
 gsap.to('body', {
     scrollTrigger: {
         trigger: "#contact-section",
@@ -232,33 +241,8 @@ gsap.to('.cursor', {
     border: "1px solid #f5f5f5"
 })
 
-contact_wrapper = document.querySelector('#contact-title-wrapper')
-button = document.querySelector(".copy-button");
-contact_toggle = document.querySelector(".contact-toggle");
 
-contact_toggle.addEventListener("click", function () {
-    button.innerHTML = "Copié !";
-    button.classList.add('copy-button-clicked');
-    navigator.clipboard.writeText("clara.balzano@gmail.com");
-    event.preventDefault();
-});
-
-
-contact_toggle.onmouseenter = function () {
-    console.log("hover");
-    button.classList.add('copy-button-visible');
-    button.classList.remove('copy-button-invisible');
-    button.classList.remove('copy-button-clicked');
-}
-
-contact_toggle.onmouseleave = function () {
-    button.classList.add('copy-button-invisible');
-    button.classList.remove('copy-button-visible');
-    button.classList.remove('copy-button-clicked');
-    button.innerHTML = "Copier l'e-mail";
-}
-
-/* smooth scroll on mouse wheel
+/* Smooth scroll on mouse wheel
 code from https://stackoverflow.com/questions/47011055/smooth-vertical-scrolling-on-mouse-wheel-in-vanilla-javascript */
 
 function init() {
@@ -316,7 +300,7 @@ function SmoothScroll(target, speed, smooth) {
             moving = false
     }
 
-    var requestFrame = function () { // requestAnimationFrame cross browser
+    var requestFrame = function () {
         return (
             window.requestAnimationFrame ||
             window.webkitRequestAnimationFrame ||
